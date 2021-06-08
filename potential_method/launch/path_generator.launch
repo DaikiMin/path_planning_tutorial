@@ -1,0 +1,25 @@
+<launch>
+    <node pkg="rviz" type="rviz" name="rviz" args= "-d $(find potential_method)/config/rviz/potential.rviz"/>
+    <!-- leonard_jones_potenti -->
+    <group ns = "potential_path_generator">
+        <node pkg="potential_method" type="potential_path_generator" name="potential_path_generator" output="screen">
+            <rosparam>
+                weight_obstacle : 1.0
+                weight_goal : 3.0
+                delta : 0.1
+                grid_width : 0.25
+            </rosparam>
+        </node>
+    </group>
+
+    <group ns = "waypoint_action">
+        <node pkg="potential_method" type="potential_robot_pose_broadcaster" name="potential_robot_pose_broadcaster">
+        </node>
+        <node pkg="potential_method" type="potential_virtual_environment" name="potential_virtual_environment">
+            <rosparam>
+                sensor_size : 50
+            </rosparam>
+        </node>
+    </group>
+</launch>
+

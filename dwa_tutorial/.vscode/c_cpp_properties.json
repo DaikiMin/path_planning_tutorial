@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/sobit-x3/catkin_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/sobit-x3/catkin_ws/src/path_planning_tutorial/dwa_tutorial/include/**",
+        "/home/sobit-x3/catkin_ws/src/DynamixelSDK/ros/include/**",
+        "/opt/ros/kinetic/share/julius/include/**",
+        "/home/sobit-x3/catkin_ws/src/jedi_training/kamen_rider/include/**",
+        "/home/sobit-x3/catkin_ws/src/leapmotion_ros/include/**",
+        "/home/sobit-x3/catkin_ws/src/m5stack_ros/include/**",
+        "/home/sobit-x3/catkin_ws/src/pcl_tutorial/include/**",
+        "/home/sobit-x3/catkin_ws/src/path_planning_tutorial/potential_method/include/**",
+        "/home/sobit-x3/catkin_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/sobit-x3/catkin_ws/src/sobit_education/sobit_education_control/include/**",
+        "/home/sobit-x3/catkin_ws/src/sobit_follower2/include/**",
+        "/home/sobit-x3/catkin_ws/src/sobit_mini/sobit_mini_control/include/**",
+        "/home/sobit-x3/catkin_ws/src/jedi_training/telekinesis/include/**",
+        "/home/sobit-x3/catkin_ws/src/wrs2019_final_ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ]
+}

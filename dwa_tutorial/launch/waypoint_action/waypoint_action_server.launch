@@ -1,0 +1,9 @@
+<launch>
+    <group ns = "waypoint_action">
+        <node pkg="dwa_tutorial" type="dwa_waypoint_server" name="dwa_waypoint_server" output="screen">
+            <rosparam>
+
+            </rosparam>
+        </node>
+    </group>
+</launch>

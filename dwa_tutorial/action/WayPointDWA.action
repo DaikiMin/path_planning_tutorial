@@ -1,0 +1,12 @@
+# Goal
+geometry_msgs/Point waypoint
+float64 dist_approach
+---
+# Result
+bool result
+---
+# FeedBack
+float64 dist_goal
+float64 ang_goal
+
+
