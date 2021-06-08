@@ -14,14 +14,6 @@ Navigationのbase_local_plannerもDWAを元にしたソフトになっていま�
 
 [詳しくはこちら](dwa_tutorial)
 
-# Rapidly-exploring Random Tree (RRT)
-*rrtの説明*
-
-
-# A*
-*`A*`の説明*
-
-
 # Potential Method
 
 障害物と目標位置の座標にポテンシャル関数と呼ばれる関数を定義し，その関数の勾配（座標成分ごとの偏微分）から進むべき方向を導出する手法  
