@@ -1,21 +1,42 @@
-# Path Planing Tutorial
-経路計画に関するTutorialです．
+# Local Path Planning Tutorial
+ローカルパスプランニングとは、環境の状況によって経路を生成する手法です。
+この「Local Path Planning Tutorial」では、2つのアルゴリズムを実装し、理解する。
 
-# Dynamic Window Approach Tutorial (DWA)
+## Dynamic Window Approach(DWA)
+- 現在の位置情報
+- 現在の速度情報
+- ロボット周辺の障害物情報
+- ゴールの位置情報
 
-DWAは1997年に有名なロボティクスの教科書である『確率ロボティクス』の著者の人達が提案した
-Local Path Planningアルゴリズムです．
+以上の情報から，ロボットの運動モデルに則した制御入力を計算する検索ベースのローカル経路生成アルゴリズムである．
 
-非常に単純なアルゴリズムでありながらも，ロボットの運動モデルを考慮したパスを
-高速に生成し，最終的なな制御入力まで計算できることから，多くのロボットで使用されています．
+<div align="center">
+    <img src="img/dwa_path_generator.png" height="320">
+</div>
 
-特に，動的環境を走行する屋内ロボットにおいては，広く利用されており，ROSのデフォルトパッケージである，
-Navigationのbase_local_plannerもDWAを元にしたソフトになっています．
+# Reference
+- [The Dynamic Window Approach to Collision Avoidance](https://www.researchgate.net/publication/3344494_The_Dynamic_Window_Approach_to_Collision_Avoidance)
+- [Dynamic Window Approachを利用したMotion planningのMATLAB, Python サンプルプログラム](https://myenigma.hatenablog.com/entry/20140624/1403618922)
 
-[詳しくはこちら](dwa_tutorial)
+## Potential Method
+障害物と目標位置の座標にポテンシャル関数と呼ばれる関数を定義し，その関数の勾配（座標成分ごとの偏微分）から進むべき方向を導出する手法である． 
 
-# Potential Method
+<div align="center">
+    <img src="img/potential_method_path_generator.png" height="320">
+</div>
 
-障害物と目標位置の座標にポテンシャル関数と呼ばれる関数を定義し，その関数の勾配（座標成分ごとの偏微分）から進むべき方向を導出する手法  
+# Reference
+[ポテンシャル法によるロボット製品の障害物回避技術の開発](https://www.mhi.co.jp/technology/review/pdf/511/511040.pdf)
 
-[詳しくはこちら](potential_method)  
+## Comparison
+DWAとPotential Methodの経路の比較ができるプログラム
+
+```bash
+$ roslaunch local_path_planning_tutorial local_path_planning_comparison.launch 
+```
+rvizの2D Nav Goalで目標位置を決定すると，経路生成を開始します．
+
+<div align="center">
+    <img src="img/local_path_planning_comparison.png" height="320">
+</div>
+

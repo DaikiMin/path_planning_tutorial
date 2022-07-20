@@ -1,9 +1,0 @@
-{
-    "python.autoComplete.extraPaths": [
-        "/home/sobit-x3/catkin_ws/devel/lib/python2.7/dist-packages",
-        "/opt/ros/kinetic/lib/python2.7/dist-packages",
-        "/usr/local/lib/python2.7/dist-packages",
-        "/home/sobit-x3/LeapSDK/lib",
-        "/home/sobit-x3/LeapSDK/lib/x64"
-    ]
-}
